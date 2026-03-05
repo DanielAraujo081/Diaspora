@@ -1,0 +1,148 @@
+/* Importa a fonte 'Roboto' do Google Fonts para um visual mais moderno */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Estilos gerais para o corpo da página */
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background: linear-gradient(135deg, #ffecd2, #fcb69f); /* Fundo em gradiente */
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Estilo do cabeçalho */
+header {
+    text-align: center;
+    background: #ff7f50; /* Cor Laranja/Coral */
+    color: white;
+    padding: 15px 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2); /* Sombra suave */
+}
+
+h1, h2, h3 {
+    margin: 10px 0;
+    color: #2c3e50; /* Azul escuro */
+}
+
+/* Estilo customizado para os títulos das fases */
+h3 {
+    background-color: #3498db; /* Azul */
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 40px;
+}
+
+/* Container principal que centraliza o conteúdo */
+main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Layout de colunas 70/30 para a tela principal */
+#mainView {
+    display: flex; /* Ativa o layout flexbox */
+    flex-wrap: wrap; /* Permite que as colunas quebrem em telas menores */
+    gap: 20px; /* Espaçamento de 20px entre as colunas */
+}
+.ranking-column {
+    width: calc(70% - 10px); /* Ocupa 70% da largura, descontando metade do espaçamento */
+}
+.history-column {
+    width: calc(30% - 10px); /* Ocupa 30% da largura, descontando metade do espaçamento */
+}
+.full-width-container {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Estilo padrão para os "cartões" brancos */
+.card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Estilo padrão para os botões */
+button {
+    background: #ff7f50;
+    border: none;
+    padding: 10px 15px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s; /* Animação suave */
+    font-weight: bold;
+}
+button:hover:not(:disabled) {
+    background: #e56b3b; /* Cor mais escura ao passar o mouse */
+}
+button:disabled {
+    background-color: #bdc3c7; /* Cor cinza para botões desabilitados */
+    cursor: not-allowed;
+}
+
+/* Botão de voltar com cor diferente */
+#btnVoltarPrincipal {
+    background-color: #7f8c8d; /* Cinza */
+}
+
+/* Estilo para campos de texto e seleção */
+input, select {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin: 5px 0;
+}
+#nomeParticipante { width: calc(100% - 100px); }
+
+/* Estilo geral para tabelas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    vertical-align: middle;
+}
+th {
+    background: #ffdab9; /* Cor pêssego para o cabeçalho da tabela */
+}
+
+/* Classe utilitária para esconder elementos */
+.hidden {
+    display: none;
+}
+
+/* Estilo para a seção de cada rodada */
+.round-section {
+    margin-top: 30px;
+    border-top: 2px solid #ff7f50;
+    padding-top: 20px;
+}
+
+/* Estilo para a área de controles (quantos passam, finalizar rodada) */
+.round-controls, .tie-breaker {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+/* Estilo para os botões de desempate manual */
+.tie-breaker button {
+    background-color: #f39c12; /* Laranja */
+    margin: 5px;
+}
+.tie-breaker button.selected {
+    background-color: #2ecc71; /* Verde quando selecionado */
+    border: 2px solid #27ae60;
+    transform: scale(1.05); /* Efeito de destaque */
+}

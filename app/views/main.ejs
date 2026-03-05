@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Campeonatos de Poesia</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+</head>
+<body>
+
+<header>
+    <h1>🏆 Gerenciador de Campeonatos de Poesia</h1>
+</header>
+
+<main>
+    <div id="mainView">
+        <div class="main-column ranking-column">
+            <div class="card">
+                <h2>Ranking Geral</h2>
+                <table id="rankingTable">
+                    <thead>
+                        <tr>
+                            <th>Pos.</th>
+                            <th>Poeta</th>
+                            <th>🥇</th>
+                            <th>🥈</th>
+                            <th>🥉</th>
+                            <th>Edições</th>
+                            <th>Média</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+        <div class="main-column history-column">
+            <div class="card">
+                <h2>Histórico de Edições</h2>
+                <table id="historyTable">
+                    <thead>
+                        <tr>
+                            <th>Nome da Edição</th>
+                            <th>Data</th>
+                            <th>Ação</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+        <div class="full-width-container">
+            <button id="btnNovaEdicao">➕ Adicionar nova edição</button>
+        </div>
+    </div>
+
+    <div id="campeonatoArea" class="hidden">
+        <div class="card">
+            <h2 id="eventTitle"></h2>
+            
+            <div id="addParticipantSection">
+                <h3>Adicionar Participante (1ª Fase)</h3>
+                <input type="text" id="nomeParticipante" placeholder="Nome do participante">
+                <button id="btnAdicionarParticipante">Adicionar</button>
+            </div>
+            
+            <div id="roundsContainer"></div>
+            
+            <div id="eventResultContainer" class="hidden"></div>
+
+            <div class="full-width-container">
+                 <button id="btnVoltarPrincipal" class="hidden">⬅️ Voltar para a Tela Principal</button>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script src="/scriptmomentano/script.js"></script>
+</body>
+</html>
